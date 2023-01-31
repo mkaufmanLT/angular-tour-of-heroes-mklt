@@ -4,9 +4,8 @@ import { HeroDetailComponent } from './hero-detail.component';
 import {ActivatedRoute} from '@angular/router';
 import {HeroService} from '../hero.service';
 
-class MockHeroService {};
 class MockActivatedRoute {};
-
+class MockHeroService {};
 class MockLocation {};
 
 describe('HeroDetailComponent', () => {
@@ -18,7 +17,8 @@ describe('HeroDetailComponent', () => {
       declarations: [ HeroDetailComponent ],
       providers: [
         { provide: ActivatedRoute, useClass: MockActivatedRoute },
-        { provide: HeroService, useClass: MockHeroService }
+        { provide: HeroService, useClass: MockHeroService },
+        { provide: Location, useClass: MockLocation},
     ]
     })
     .compileComponents();
